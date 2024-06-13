@@ -165,7 +165,7 @@ const register = async (server: Hapi.Server, options: ExtendedAdminJSOptions) =>
         ? {
             auth,
             payload: {
-              allow: 'multipart/form-data',
+              allow: ['multipart/form-data', 'application/json'],
               multipart: { output: 'stream' },
             },
           }
